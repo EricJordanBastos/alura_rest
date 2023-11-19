@@ -15,5 +15,4 @@ class Cursos (admin.ModelAdmin):
     list_display_links=('id','codigo')
     search_fields=('codigo',)
 
-
-admin.site.register(curso, Cursos)
+admin.site.register(curso,Cursos)

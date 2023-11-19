@@ -1,13 +1,18 @@
 from rest_framework import serializers
-from escola.models import Aluno, Curso
+from escola.models import aluno, curso, matricula
 
 class AlunoSerializer(serializers.ModelSerializer):
     class Meta:
-        Model=Aluno
-        fields=['nome','rg','cpf','data_nascimento']
+        model=aluno
+        fields='__all__'
 
 class CursoSerializer(serializers.ModelSerializer):
     class Meta:
-        Model=Curso
+        model=curso
         fields='__all__'
 
+class MatriculaSerializer(serializers.ModelSerializer):
+    class Meta:
+        model=matricula
+        # fields='__all__'
+        exclude=['']
